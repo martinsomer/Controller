@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- TOP ROW -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- LT/LB -->
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:splitMotionEvents="true">
+
+            <Button
+                android:id="@+id/leftBumper"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="120dp"
+                android:background="@drawable/button_shoulder_left"
+                android:textColor="@android:color/white"
+                android:text="LB"/>
+
+            <Button
+                android:id="@+id/leftTrigger"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_shoulder_left"
+                android:textColor="@android:color/white"
+                android:text="LT"/>
+
+        </RelativeLayout>
+
+        <!-- BACK/START -->
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:splitMotionEvents="true">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/button_round"
+                android:textColor="@android:color/white"
+                android:text="BACK"/>
+
+            <Button
+                android:id="@+id/start"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/button_round"
+                android:textColor="@android:color/white"
+                android:text="START"/>
+
+        </LinearLayout>
+
+        <!-- RB/RT -->
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:splitMotionEvents="true">
+
+            <Button
+                android:id="@+id/rightBumper"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingEnd="120dp"
+                android:background="@drawable/button_shoulder_right"
+                android:textColor="@android:color/white"
+                android:text="RB"/>
+
+            <Button
+                android:id="@+id/rightTrigger"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/button_shoulder_right"
+                android:textColor="@android:color/white"
+                android:text="RT"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- MIDDLE ROW -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- D-PAD -->
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rotation="45"
+            android:gravity="center"
+            android:splitMotionEvents="true">
+
+            <ImageButton
+                android:id="@+id/up"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_arrow"
+                android:scaleType="centerCrop"
+                android:background="@drawable/button_dpad"/>
+
+            <ImageButton
+                android:id="@+id/left"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_arrow"
+                android:scaleType="centerCrop"
+                android:rotation="270"
+                android:layout_below="@id/up"
+                android:background="@drawable/button_dpad"/>
+
+            <ImageButton
+                android:id="@+id/right"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_arrow"
+                android:scaleType="centerCrop"
+                android:rotation="90"
+                android:layout_toEndOf="@id/up"
+                android:background="@drawable/button_dpad"/>
+
+            <ImageButton
+                android:id="@+id/down"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_arrow"
+                android:scaleType="centerCrop"
+                android:rotation="180"
+                android:layout_toEndOf="@id/left"
+                android:layout_below="@id/right"
+                android:background="@drawable/button_dpad"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Free space for extra buttons -->
+
+        </RelativeLayout>
+
+        <!-- Y/B/X/A -->
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rotation="45"
+            android:gravity="center"
+            android:splitMotionEvents="true">
+
+            <Button
+                android:id="@+id/y"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                android:rotation="-45"
+                android:background="@drawable/button_circle"
+                android:text="Y"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/b"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="5dp"
+                android:rotation="-45"
+                android:layout_below="@id/y"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_circle"
+                android:text="B"/>
+
+            <Button
+                android:id="@+id/x"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:rotation="-45"
+                android:layout_toEndOf="@id/y"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_circle"
+                android:text="X"/>
+
+            <Button
+                android:id="@+id/a"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:rotation="-45"
+                android:layout_toEndOf="@id/b"
+                android:layout_below="@id/x"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_circle"
+                android:text="A"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- BOTTOM ROW -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:splitMotionEvents="true">
+
+        <com.erz.joysticklibrary.JoyStick
+            android:id="@+id/joyStickLeft"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            app:buttonColor="@android:color/white"
+            app:padColor="@color/colorPrimary" />
+
+        <com.erz.joysticklibrary.JoyStick
+            android:id="@+id/joyStickRight"
+            android:layout_width="137dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="60dp"
+            app:buttonColor="@android:color/white"
+            app:padColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+</LinearLayout>
