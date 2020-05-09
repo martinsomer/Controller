@@ -91,11 +91,8 @@ public class Controller extends AppCompatActivity {
             double power = joyStick.getPower() / 100;
             if (power > 1) power = 1;
 
-            double xValue = Math.cos(angle) * -128 * power;
-            double yValue = Math.sin(angle) * 128 * power;
-
-            packetDataStream.write((byte) xValue);
-            packetDataStream.write((byte) yValue);
+            packetDataStream.write((byte) (Math.cos(angle) * -127 * power));
+            packetDataStream.write((byte) (Math.sin(angle) * 127 * power));
         }
 
         connectionManager.sendPacket(packetDataStream.toByteArray());
