@@ -1,3 +1,11 @@
+/*
+ * This is the main activity.
+ *
+ * It checks if the device is connected to Wi-Fi,
+ * validates the IP address and port input field
+ * values and passes them to the controller activity.
+ */
+
 package com.kyberwara.controller;
 
 import android.content.Intent;

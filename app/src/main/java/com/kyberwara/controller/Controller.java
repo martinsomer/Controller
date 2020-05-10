@@ -1,3 +1,14 @@
+/*
+ * This is the controller activity.
+ *
+ * It receives the IP address and port variables
+ * from the main activity, connects to the server,
+ * checks the state of controller buttons,
+ * and passes that information to the connection manager.
+ *
+ * Upon exiting, the user is asked for a confirmation.
+ */
+
 package com.kyberwara.controller;
 
 import android.app.AlertDialog;

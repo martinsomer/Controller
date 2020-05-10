@@ -1,3 +1,12 @@
+/*
+ * This is the connection manager.
+ *
+ * Upon initialization, it creates a socket.
+ * It can then send packets asynchronously to the IP address
+ * and port number specified when calling the constructor.
+ * Upon exiting, a disconnect message is sent to the server.
+ */
+
 package com.kyberwara.controller;
 
 import android.util.Log;
