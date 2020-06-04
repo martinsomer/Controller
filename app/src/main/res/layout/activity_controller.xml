@@ -173,7 +173,7 @@
 
         </RelativeLayout>
 
-        <!-- Y/B/X/A -->
+        <!-- Y/X/B/A -->
         <RelativeLayout
             android:layout_weight="1"
             android:layout_width="match_parent"
@@ -193,7 +193,7 @@
                 android:textColor="@android:color/white" />
 
             <Button
-                android:id="@+id/b"
+                android:id="@+id/x"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="5dp"
@@ -201,10 +201,10 @@
                 android:layout_below="@id/y"
                 android:textColor="@android:color/white"
                 android:background="@drawable/button_circle"
-                android:text="B"/>
+                android:text="X"/>
 
             <Button
-                android:id="@+id/x"
+                android:id="@+id/b"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="5dp"
@@ -212,7 +212,7 @@
                 android:layout_toEndOf="@id/y"
                 android:textColor="@android:color/white"
                 android:background="@drawable/button_circle"
-                android:text="X"/>
+                android:text="B"/>
 
             <Button
                 android:id="@+id/a"
@@ -220,8 +220,8 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
                 android:rotation="-45"
-                android:layout_toEndOf="@id/b"
-                android:layout_below="@id/x"
+                android:layout_toEndOf="@id/x"
+                android:layout_below="@id/b"
                 android:textColor="@android:color/white"
                 android:background="@drawable/button_circle"
                 android:text="A"/>
